@@ -80,7 +80,7 @@
                 android:id="@+id/facebook"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/facebook_logo"
+                android:src="@drawable/facebook"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
                 />
@@ -89,7 +89,7 @@
                 android:id="@+id/instagram"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/instagram_logo"
+                android:src="@drawable/instagram"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="20dp"
