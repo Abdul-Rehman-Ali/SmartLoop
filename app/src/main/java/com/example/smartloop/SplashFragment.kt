@@ -29,12 +29,10 @@ class SplashFragment : Fragment() {
         Handler().postDelayed({
             if (finishedOnboarding()){
                 findNavController().navigate(R.id.action_splashFragment_to_loginSignUp)
-
             } else {
                 findNavController().navigate(R.id.action_splashFragment_to_viewPagerFregment)
             }
         }, 3000)
-
         return view
     }
 

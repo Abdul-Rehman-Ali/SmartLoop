@@ -22,6 +22,5 @@ class PasswordChanged : AppCompatActivity() {
             finish()
             startActivity(i)
         }
-
     }
 }

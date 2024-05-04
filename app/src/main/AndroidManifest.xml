@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SmartLoop"
         tools:targetApi="31">
         <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
             android:name=".PasswordChanged"
             android:exported="false" />
         <activity
