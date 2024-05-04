@@ -8,4 +8,11 @@
     </style>
 
     <style name="Theme.SmartLoop" parent="Base.Theme.SmartLoop" />
+
+    <style name="Theme.NoToolbar" parent="Base.Theme.SmartLoop">
+        <!-- Override attributes related to the toolbar to remove it -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
 </resources>
