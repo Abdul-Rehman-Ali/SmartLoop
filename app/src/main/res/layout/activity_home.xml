@@ -36,10 +36,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="@color/primary"
-            app:itemIconTint="@color/primary"
-            app:itemTextColor="@color/primary"
-            app:backgroundTint="@color/primary"
+            android:background="@drawable/nav_background"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
             app:menu="@menu/bottom_nav" />
 
     </RelativeLayout>

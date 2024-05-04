@@ -7,22 +7,22 @@
         android:checkableBehavior="single"
         >
         <item
-            android:id="@+id/nav_bottom_home"
+            android:id="@+id/nav_side_home"
             android:icon="@drawable/baseline_home_24"
             android:title="Home"
             />
         <item
-            android:id="@+id/nav_bottom_about"
+            android:id="@+id/nav_side_course"
             android:icon="@drawable/courses"
             android:title="Courses"
             />
         <item
-            android:id="@+id/nav_bottom_contact"
+            android:id="@+id/nav_side_search"
             android:icon="@drawable/search"
             android:title="Search"
             />
         <item
-            android:id="@+id/nav_bottom_settings"
+            android:id="@+id/nav_side_profile"
             android:icon="@drawable/account"
             android:title="Account"
             />
