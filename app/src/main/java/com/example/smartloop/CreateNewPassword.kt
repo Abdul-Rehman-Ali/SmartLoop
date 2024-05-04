@@ -19,6 +19,7 @@ class CreateNewPassword : AppCompatActivity() {
 
         binding.btnNext.setOnClickListener {
             val i = Intent(this, PasswordChanged::class.java)
+            finish()
             startActivity(i)
         }
 

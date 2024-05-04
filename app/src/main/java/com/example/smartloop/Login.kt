@@ -20,6 +20,7 @@ class Login : AppCompatActivity() {
 
         binding.forgetPassword.setOnClickListener {
             val i = Intent(this, ForgetPassword::class.java)
+            finish()
             startActivity(i)
         }
 

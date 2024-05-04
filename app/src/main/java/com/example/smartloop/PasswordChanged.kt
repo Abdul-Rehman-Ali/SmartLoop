@@ -19,6 +19,7 @@ class PasswordChanged : AppCompatActivity() {
 
         binding.btnBackToLogin.setOnClickListener {
             val i = Intent(this, Login::class.java)
+            finish()
             startActivity(i)
         }
 

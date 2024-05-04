@@ -19,6 +19,7 @@ class OtpVarification : AppCompatActivity() {
 
         binding.btnVerify.setOnClickListener {
             val i = Intent(this, CreateNewPassword::class.java)
+            finish()
             startActivity(i)
         }
 

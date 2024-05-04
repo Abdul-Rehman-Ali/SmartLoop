@@ -20,6 +20,7 @@ class ForgetPassword : AppCompatActivity() {
 
         binding.btnSendCode.setOnClickListener {
             val i = Intent(this, OtpVarification::class.java)
+            finish()
             startActivity(i)
         }
 
