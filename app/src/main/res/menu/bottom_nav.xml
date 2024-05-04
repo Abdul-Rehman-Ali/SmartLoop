@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <group
+        android:checkableBehavior="single"
+        >
+        <item
+            android:id="@+id/nav_bottom_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Home"
+            />
+        <item
+            android:id="@+id/nav_bottom_about"
+            android:icon="@drawable/courses"
+            android:title="Courses"
+            />
+        <item
+            android:id="@+id/nav_bottom_contact"
+            android:icon="@drawable/search"
+            android:title="Search"
+            />
+        <item
+            android:id="@+id/nav_bottom_settings"
+            android:icon="@drawable/account"
+            android:title="Account"
+            />
+    </group>
+
+</menu>
