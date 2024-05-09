@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "451275327064",
+    "project_id": "smartloop-b5fe3",
+    "storage_bucket": "smartloop-b5fe3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451275327064:android:36188ad97a2cd6f7406c2d",
+        "android_client_info": {
+          "package_name": "com.example.smartloop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFQMKccrGHHzx7rEG2YGWniz7CBBmG4kg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
