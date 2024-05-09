@@ -55,10 +55,226 @@
 <!--                android:background="@drawable/homemyback"-->
 <!--                android:text="SmartLoop offers a seamless online learning experience, empowering students to engage with interactive courses tailored to their needs." />-->
 
+            <HorizontalScrollView
+                android:id="@+id/horizontalcardview"
+                android:layout_marginTop="250dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/image_slider"
+                app:layout_constraintTop_toBottomOf="@+id/image_slider"
+                android:scrollbars="none"
+                >
+                <LinearLayout
+                    android:id="@+id/maincard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    >
+
+                    <!--First card start-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        >
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/circle_shape"
+                            android:backgroundTint="@color/white"
+                            app:cardCornerRadius="60dp"
+                            app:cardElevation="5dp"
+                            android:layout_margin="5dp"
+
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                app:cardElevation="2dp"
+                                android:padding="15dp"
+                                >
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_weight="0.5"
+                                    android:src="@drawable/digitalmarketing"
+                                    />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3.5"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textSize="20sp"
+                                        android:gravity="center"
+                                        android:text="Profile" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <!--Second card start-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        >
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/circle_shape"
+                            android:backgroundTint="@color/white"
+                            app:cardCornerRadius="60dp"
+                            app:cardElevation="5dp"
+                            android:layout_margin="5dp"
+
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                app:cardElevation="2dp"
+                                android:padding="15dp"
+                                >
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_weight="0.5"
+                                    android:src="@drawable/digitalmarketing"
+                                    />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3.5"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textSize="20sp"
+                                        android:gravity="center"
+                                        android:text="Profile" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        >
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/circle_shape"
+                            android:backgroundTint="@color/white"
+                            app:cardCornerRadius="60dp"
+                            app:cardElevation="5dp"
+                            android:layout_margin="5dp"
+
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                app:cardElevation="2dp"
+                                android:padding="15dp"
+                                >
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_weight="0.5"
+                                    android:src="@drawable/digitalmarketing"
+                                    />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3.5"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textSize="20sp"
+                                        android:gravity="center"
+                                        android:text="Profile" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        >
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/circle_shape"
+                            app:cardCornerRadius="60dp"
+                            app:cardElevation="5dp"
+                            android:layout_margin="5dp"
+
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                app:cardElevation="2dp"
+                                android:padding="15dp"
+                                >
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_weight="0.5"
+                                    android:src="@drawable/digitalmarketing"
+                                    />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3.5"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textSize="20sp"
+                                        android:gravity="center"
+                                        android:text="Profile" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/image_slider"
+                android:layout_below="@+id/horizontalcardview"
                 android:rowCount="3"
                 android:columnCount="2"
                 android:layout_marginTop="15dp"
