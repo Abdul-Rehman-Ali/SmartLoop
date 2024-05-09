@@ -23,11 +23,19 @@ class SignUp : AppCompatActivity() {
             val email = binding.etEmail.text.toString()
             val password = binding.etPassword.text.toString()
 
-            if(checkAllField()){
-                auth.createUserWithEmailAndPassword(email,password).addOnCanceledListener {
+            if (checkAllField()) {
+                auth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
 
-                  Toast.makeText(this,"Successfully Account Created",Toast.LENGTH_SHORT).show()
-                }
+                            Toast.makeText(this, "Successfully Account Created",
+                                Toast.LENGTH_SHORT).show()
+                            clearFields()
+                        } else {
+                            Toast.makeText(baseContext, "Authentication failed.",
+                                Toast.LENGTH_SHORT).show()
+                        }
+                    }
             }
         }
     }
@@ -54,7 +62,12 @@ class SignUp : AppCompatActivity() {
             binding.etPhone.requestFocus()
             return false
         }
-        if (binding.etPhone.length() < 11 && binding.etPhone.length()>11){
+        if ((binding.etPhone.length() < 11) ){
+            binding.etPhone.error = "Enter correct  number"
+            binding.etPhone.requestFocus()
+            return false
+        }
+        if ((binding.etPhone.length() > 11) ){
             binding.etPhone.error = "Enter correct  number"
             binding.etPhone.requestFocus()
             return false
@@ -82,4 +95,20 @@ class SignUp : AppCompatActivity() {
 
         return true
     }
+
+    private fun clearFields() {
+        binding.etUsername.text.clear()
+        binding.etEmail.text.clear()
+        binding.etPhone.text.clear()
+        binding.etPassword.text.clear()
+        binding.etConfirmPassword.text.clear()
+
+        // Clear any errors that might have been set
+        binding.etUsername.error = null
+        binding.etEmail.error = null
+        binding.etPhone.error = null
+        binding.etPassword.error = null
+        binding.etConfirmPassword.error = null
+    }
+
 }
