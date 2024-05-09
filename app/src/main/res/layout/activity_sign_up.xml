@@ -54,6 +54,7 @@
             />
 
         <EditText
+            android:id="@+id/et_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Your Name"
@@ -77,6 +78,7 @@
             />
 
         <EditText
+            android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="name@gmail.com"
@@ -84,7 +86,7 @@
             android:background="@drawable/login_et"
             android:layout_marginRight="30dp"
             android:autofillHints="emailAddress"
-            android:inputType="text" />
+            android:inputType="textEmailAddress" />
 
         <TextView
             android:id="@+id/phone"
@@ -100,6 +102,7 @@
             />
 
         <EditText
+            android:id="@+id/et_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Your Number"
@@ -107,7 +110,7 @@
             android:background="@drawable/login_et"
             android:layout_marginRight="30dp"
             android:autofillHints="phone"
-            android:inputType="number" />
+            android:inputType="phone" />
 
         <TextView
             android:id="@+id/password"
@@ -123,9 +126,36 @@
             />
 
         <EditText
+            android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Your Password"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/login_et"
+            android:layout_marginRight="30dp"
+            android:autofillHints="emailAddress"
+            android:inputType="textPassword"
+            android:drawableEnd="@drawable/eye_regular"
+            />
+
+        <TextView
+            android:id="@+id/confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password"
+            android:textSize="18sp"
+            android:textColor="#474545"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="30dp"
+            android:fontFamily="sans-serif-condensed"
+            />
+
+        <EditText
+            android:id="@+id/et_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Your Confirm Password"
             android:layout_marginLeft="30dp"
             android:background="@drawable/login_et"
             android:layout_marginRight="30dp"
