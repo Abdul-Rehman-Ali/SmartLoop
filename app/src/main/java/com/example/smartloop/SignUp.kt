@@ -36,38 +36,47 @@ class SignUp : AppCompatActivity() {
         val email = binding.etEmail.text.toString()
         if(binding.etUsername.text.toString() == ""){
             binding.etUsername.error = "This is required field"
+            binding.etUsername.requestFocus()
             return false
         }
         if(binding.etEmail.text.toString() == ""){
             binding.etEmail.error = "This is required field"
+            binding.etEmail.requestFocus()
             return false
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             binding.etEmail.error = "Check email format"
+            binding.etEmail.requestFocus()
             return false
         }
         if (binding.etPhone.text.toString() == ""){
             binding.etPhone.error = "This is required field"
+            binding.etPhone.requestFocus()
             return false
         }
         if (binding.etPhone.length() < 11 && binding.etPhone.length()>11){
             binding.etPhone.error = "Enter correct  number"
+            binding.etPhone.requestFocus()
             return false
         }
         if (binding.etPassword.text.toString() == ""){
             binding.etPassword.error = "This is required field"
+            binding.etPassword.requestFocus()
             return false
         }
         if (binding.etPassword.length() < 8){
             binding.etPassword.error = "Password should be 8  characters"
+            binding.etPassword.requestFocus()
             return false
         }
         if (binding.etConfirmPassword.text.toString() == ""){
             binding.etConfirmPassword.error = "This is required field"
+            binding.etConfirmPassword.requestFocus()
             return false
         }
         if (binding.etPassword.text.toString() != binding.etConfirmPassword.text.toString()){
             binding.etConfirmPassword.error = "Password do not match"
+            binding.etConfirmPassword.requestFocus()
             return false
         }
 
