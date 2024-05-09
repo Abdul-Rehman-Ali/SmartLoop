@@ -50,6 +50,10 @@ class SignUp : AppCompatActivity() {
             binding.etPhone.error = "This is required field"
             return false
         }
+        if (binding.etPhone.length() < 11 && binding.etPhone.length()>11){
+            binding.etPhone.error = "Enter correct  number"
+            return false
+        }
         if (binding.etPassword.text.toString() == ""){
             binding.etPassword.error = "This is required field"
             return false
@@ -63,7 +67,7 @@ class SignUp : AppCompatActivity() {
             return false
         }
         if (binding.etPassword.text.toString() != binding.etConfirmPassword.text.toString()){
-            binding.etPassword.error = "Password do not match"
+            binding.etConfirmPassword.error = "Password do not match"
             return false
         }
 

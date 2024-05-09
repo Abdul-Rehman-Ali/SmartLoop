@@ -155,7 +155,7 @@
             android:id="@+id/et_confirm_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Your Confirm Password"
+            android:hint="Confirm Password"
             android:layout_marginLeft="30dp"
             android:background="@drawable/login_et"
             android:layout_marginRight="30dp"
