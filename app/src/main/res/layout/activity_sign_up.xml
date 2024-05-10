@@ -124,18 +124,35 @@
             android:fontFamily="sans-serif-condensed"
             />
 
-        <EditText
-            android:id="@+id/et_password"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Your Password"
-            android:layout_marginLeft="30dp"
-            android:background="@drawable/login_et"
             android:layout_marginRight="30dp"
             android:autofillHints="emailAddress"
             android:inputType="textPassword"
-            android:drawableEnd="@drawable/baseline_visibility_off_24"
-            />
+            app:passwordToggleEnabled="true"
+            android:hint="Enter Password"
+            app:hintEnabled="false"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_et"
+                android:textSize="18sp"
+                android:textColor="#474545"
+                android:layout_marginTop="20dp"
+                android:hint="Enter Password"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="30dp"
+                android:fontFamily="sans-serif-condensed"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/confirm_password"
@@ -150,19 +167,33 @@
             android:fontFamily="sans-serif-condensed"
             />
 
-        <EditText
-            android:id="@+id/et_confirm_password"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirm Password"
-            android:layout_marginLeft="30dp"
-            android:background="@drawable/login_et"
             android:layout_marginRight="30dp"
             android:autofillHints="emailAddress"
             android:inputType="textPassword"
-            android:layout_marginBottom="30dp"
-            android:drawableEnd="@drawable/baseline_visibility_off_24"
-            />
+            app:passwordToggleEnabled="true"
+            android:hint="Enter Confirm Password"
+            app:hintEnabled="false"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_et"
+                android:textSize="18sp"
+                android:textColor="#474545"
+                android:hint="Enter Confirm Password"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="30dp"
+                android:fontFamily="sans-serif-condensed"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
