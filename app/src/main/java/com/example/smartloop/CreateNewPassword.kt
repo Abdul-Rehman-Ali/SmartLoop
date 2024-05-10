@@ -35,13 +35,15 @@ class CreateNewPassword : AppCompatActivity() {
                         Toast.makeText(this, "Update Successfully",
                             Toast.LENGTH_SHORT).show()
                         clearFields()
+                        val i = Intent(this, Login::class.java)
+                        finish()
+                        startActivity(i)
                     } else {
                         Toast.makeText(baseContext, "Password not updated",
                             Toast.LENGTH_SHORT).show()
                     }
                 }
                 }
-
 
 //            val i = Intent(this, PasswordChanged::class.java)
 //            finish()
