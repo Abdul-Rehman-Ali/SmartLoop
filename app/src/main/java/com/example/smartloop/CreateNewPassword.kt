@@ -2,14 +2,20 @@ package com.example.smartloop
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Patterns
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.smartloop.databinding.ActivityCreateNewPasswordBinding
 import com.example.smartloop.databinding.ActivityForgetPasswordBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class CreateNewPassword : AppCompatActivity() {
+    private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityCreateNewPasswordBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,12 +23,66 @@ class CreateNewPassword : AppCompatActivity() {
         binding = ActivityCreateNewPasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        auth = Firebase.auth
+
         binding.btnNext.setOnClickListener {
-            val i = Intent(this, PasswordChanged::class.java)
-            finish()
-            startActivity(i)
+            val user = auth.currentUser
+            val password = binding.etPassword.text.toString()
+            if (checkAllField()) {
+                user?.updatePassword(password)?.addOnCompleteListener {task->
+                    if (task.isSuccessful) {
+
+                        Toast.makeText(this, "Update Successfully",
+                            Toast.LENGTH_SHORT).show()
+                        clearFields()
+                    } else {
+                        Toast.makeText(baseContext, "Password not updated",
+                            Toast.LENGTH_SHORT).show()
+                    }
+                }
+                }
+
+
+//            val i = Intent(this, PasswordChanged::class.java)
+//            finish()
+//            startActivity(i)
+            }
         }
 
+    private fun checkAllField(): Boolean {
+//        val email = binding.etEmail.text.toString()
 
+        if (binding.etPassword.text.toString() == ""){
+            binding.etPassword.error = "This is required field"
+            binding.etPassword.requestFocus()
+            return false
+        }
+        if (binding.etPassword.length() < 8){
+            binding.etPassword.error = "Password should be 8  characters"
+            binding.etPassword.requestFocus()
+            return false
+        }
+        if (binding.etConfirmPassword.text.toString() == ""){
+            binding.etConfirmPassword.error = "This is required field"
+            binding.etConfirmPassword.requestFocus()
+            return false
+        }
+        if (binding.etPassword.text.toString() != binding.etConfirmPassword.text.toString()){
+            binding.etConfirmPassword.error = "Password do not match"
+            binding.etConfirmPassword.requestFocus()
+            return false
+        }
+
+        return true
     }
+
+private fun clearFields() {
+    binding.etPassword.text?.clear()
+    binding.etConfirmPassword.text?.clear()
+
+    // Clear any errors that might have been set
+    binding.etPassword.error = null
+    binding.etConfirmPassword.error = null
+}
+
 }
