@@ -1,5 +1,6 @@
 package com.example.smartloop.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.smartloop.R
+import com.example.smartloop.WebDevelopment
 import com.example.smartloop.databinding.FragmentHomeBinding // Import the generated binding class
 
 class HomeFragment : Fragment() {
@@ -21,6 +23,16 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment using view binding
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
+
+        binding.webDevelopment.setOnClickListener {
+            try {
+                val intent = Intent(requireActivity(), WebDevelopment::class.java)
+                startActivity(intent)
+            } catch (e: Exception) {
+                // Handle exception (e.g., log error, display a message)
+            }
+        }
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -37,6 +49,8 @@ class HomeFragment : Fragment() {
 
         binding.imageSlider.setImageList(imgList, ScaleTypes.FIT)
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()
