@@ -1,7 +1,9 @@
 package com.example.smartloop
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -14,8 +16,12 @@ import com.example.smartloop.fragments.HomeFragment
 import com.example.smartloop.fragments.ProfileFragment
 import com.example.smartloop.fragments.SearchFragment
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
+    private lateinit var auth: FirebaseAuth
     private lateinit var fragmentManager: FragmentManager
     private lateinit var binding: ActivityHomeBinding
 
@@ -23,6 +29,8 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        auth = Firebase.auth
 
         setSupportActionBar(binding.toolbar)
         binding.toolbar.title = "Smart"
@@ -51,12 +59,25 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
     }
 
+
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_side_home -> openFragment(HomeFragment())
             R.id.nav_side_course -> openFragment(CourseFragment())
             R.id.nav_side_search -> openFragment(SearchFragment())
             R.id.nav_side_profile -> openFragment(ProfileFragment())
+            R.id.log_out ->  {
+                auth.signOut()
+
+                Toast.makeText(this, "Log Out Successfully",
+                    Toast.LENGTH_SHORT).show()
+
+                val i = Intent(this,
+                    LoginSignUp::class.java)
+                startActivity(i)
+                finish()
+            }
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)
         return true
