@@ -18,6 +18,13 @@ class SignUp : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+//        binding.etPassword.setCompoundDrawablesWithIntrinsicBounds(
+//            0,   // left drawable, if any (0 if none)
+//            0,   // top drawable, if any (0 if none)
+//            R.drawable.new_icon, // right drawable (end)
+//            0    // bottom drawable, if any (0 if none)
+//        )
+
         auth = Firebase.auth
         binding.btnSignUp.setOnClickListener {
             val email = binding.etEmail.text.toString()

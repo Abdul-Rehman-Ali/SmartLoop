@@ -134,7 +134,7 @@
             android:layout_marginRight="30dp"
             android:autofillHints="emailAddress"
             android:inputType="textPassword"
-            android:drawableEnd="@drawable/eye_regular"
+            android:drawableEnd="@drawable/baseline_visibility_off_24"
             />
 
         <TextView
@@ -161,7 +161,7 @@
             android:autofillHints="emailAddress"
             android:inputType="textPassword"
             android:layout_marginBottom="30dp"
-            android:drawableEnd="@drawable/eye_regular"
+            android:drawableEnd="@drawable/baseline_visibility_off_24"
             />
 
         <LinearLayout
