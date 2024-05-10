@@ -33,7 +33,7 @@
             android:paddingStart="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="step Into Digital World!"
+            android:text="step Into Smartloop!"
             android:textSize="18sp"
             android:textColor="#474545"
             android:fontFamily="sans-serif-condensed"
