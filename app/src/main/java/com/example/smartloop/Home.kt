@@ -67,6 +67,12 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             R.id.nav_side_course -> openFragment(CourseFragment())
             R.id.nav_side_search -> openFragment(SearchFragment())
             R.id.nav_side_profile -> openFragment(ProfileFragment())
+            R.id.update_password -> {
+                val i = Intent(this,
+                    CreateNewPassword::class.java)
+                startActivity(i)
+                finish()
+            }
             R.id.log_out ->  {
                 auth.signOut()
 
