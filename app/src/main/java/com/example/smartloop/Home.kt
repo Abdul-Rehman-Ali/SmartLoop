@@ -76,12 +76,13 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             R.id.log_out ->  {
                 auth.signOut()
 
-                Toast.makeText(this, "Log Out Successfully",
-                    Toast.LENGTH_SHORT).show()
-
                 val i = Intent(this,
                     LoginSignUp::class.java)
                 startActivity(i)
+
+                Toast.makeText(this, "Log Out Successfully",
+                    Toast.LENGTH_SHORT).show()
+
                 finish()
             }
         }
