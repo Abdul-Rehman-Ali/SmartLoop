@@ -69,18 +69,19 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             R.id.nav_side_search -> openFragment(SearchFragment())
             R.id.nav_side_profile -> openFragment(ProfileFragment())
             R.id.about_us -> {
-                val i = Intent(this,
-                    AboutUs::class.java)
+                val i = Intent(this, AboutUs::class.java)
                 startActivity(i)
             }
             R.id.privacy_policy -> {
-                val i = Intent(this,
-                    PrivacyPolicy::class.java)
+                val i = Intent(this, PrivacyPolicy::class.java)
+                startActivity(i)
+            }
+            R.id.feedback -> {
+                val i = Intent(this,Feedback::class.java)
                 startActivity(i)
             }
             R.id.update_password -> {
-                val i = Intent(this,
-                    CreateNewPassword::class.java)
+                val i = Intent(this, CreateNewPassword::class.java)
                 startActivity(i)
                 finish()
             }
