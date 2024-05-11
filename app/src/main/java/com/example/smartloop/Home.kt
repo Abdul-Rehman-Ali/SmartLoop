@@ -74,6 +74,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
                 startActivity(i)
                 finish()
             }
+            // ---- Delete User ----
             R.id.delete_account -> {
                 val user = auth.currentUser
                 user?.delete()?.addOnCompleteListener {
@@ -87,12 +88,14 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
                     }
                 }
             }
+            // Contact Us
             R.id.contact_us -> {
                 val number = "+923181646340"
                 val intent = Intent(Intent.ACTION_DIAL)
                 intent.setData(Uri.parse("tel:$number"))
                 startActivity(intent)
             }
+            // Log Out Logic
             R.id.log_out ->  {
                 auth.signOut()
 

@@ -13,6 +13,12 @@
         android:theme="@style/Theme.SmartLoop"
         tools:targetApi="31">
         <activity
+            android:name=".PrivacyPolicy"
+            android:exported="false" />
+        <activity
+            android:name=".AboutUs"
+            android:exported="false" />
+        <activity
             android:name=".WebDevelopment"
             android:exported="false" />
         <activity
