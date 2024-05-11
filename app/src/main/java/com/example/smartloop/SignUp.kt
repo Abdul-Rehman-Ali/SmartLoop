@@ -46,6 +46,7 @@ class SignUp : AppCompatActivity() {
         }
     }
 
+    // My  All Fields Validation
     private fun checkAllField(): Boolean {
         val email = binding.etEmail.text.toString()
         if(binding.etUsername.text.toString() == ""){
