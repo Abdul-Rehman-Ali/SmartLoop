@@ -39,7 +39,7 @@
                 android:textColor="@color/primary"
                 android:textStyle="bold"
                 android:textSize="20sp"
-                android:text="Popular Categories"
+                android:text="We Provided"
                 app:layout_constraintEnd_toEndOf="@+id/image_slider"
                 app:layout_constraintTop_toBottomOf="@+id/image_slider"
                 />
@@ -108,6 +108,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical"
+                                android:background="#ebe7e4"
                                 app:cardElevation="2dp"
                                 android:padding="15dp"
                                 >
@@ -116,7 +117,7 @@
                                     android:layout_width="70dp"
                                     android:layout_height="70dp"
                                     android:layout_weight="0.5"
-                                    android:src="@drawable/digitalmarketing"
+                                    android:src="@drawable/learning1"
                                     />
 
                                 <LinearLayout
@@ -130,6 +131,7 @@
                                         android:layout_height="match_parent"
                                         android:textSize="15sp"
                                         android:gravity="center"
+                                        android:textColor="@color/primary"
                                         android:text="Profile" />
 
                                 </LinearLayout>
@@ -158,6 +160,7 @@
                                 android:layout_height="match_parent"
                                 android:orientation="vertical"
                                 app:cardElevation="2dp"
+                                android:background="#ebe7e4"
                                 android:padding="15dp"
                                 >
 
@@ -165,7 +168,7 @@
                                     android:layout_width="70dp"
                                     android:layout_height="70dp"
                                     android:layout_weight="0.5"
-                                    android:src="@drawable/digitalmarketing"
+                                    android:src="@drawable/learning2"
                                     />
 
                                 <LinearLayout
@@ -179,6 +182,7 @@
                                         android:layout_height="match_parent"
                                         android:textSize="15sp"
                                         android:gravity="center"
+                                        android:textColor="@color/primary"
                                         android:text="Profile" />
 
                                 </LinearLayout>
@@ -207,6 +211,7 @@
                                 android:layout_height="match_parent"
                                 android:orientation="vertical"
                                 app:cardElevation="2dp"
+                                android:background="#ebe7e4"
                                 android:padding="15dp"
                                 >
 
@@ -214,7 +219,7 @@
                                     android:layout_width="70dp"
                                     android:layout_height="70dp"
                                     android:layout_weight="0.5"
-                                    android:src="@drawable/digitalmarketing"
+                                    android:src="@drawable/learning3"
                                     />
 
                                 <LinearLayout
@@ -228,6 +233,7 @@
                                         android:layout_height="match_parent"
                                         android:textSize="15sp"
                                         android:gravity="center"
+                                        android:textColor="@color/primary"
                                         android:text="Profile" />
 
                                 </LinearLayout>
@@ -256,6 +262,7 @@
                                 android:layout_height="match_parent"
                                 android:orientation="vertical"
                                 app:cardElevation="2dp"
+                                android:background="#ebe7e4"
                                 android:padding="15dp"
                                 >
 
@@ -263,7 +270,7 @@
                                     android:layout_width="70dp"
                                     android:layout_height="70dp"
                                     android:layout_weight="0.5"
-                                    android:src="@drawable/digitalmarketing"
+                                    android:src="@drawable/learning4"
                                     />
 
                                 <LinearLayout
@@ -277,6 +284,7 @@
                                         android:layout_height="match_parent"
                                         android:textSize="15sp"
                                         android:gravity="center"
+                                        android:textColor="@color/primary"
                                         android:text="Profile" />
 
                                 </LinearLayout>
@@ -287,10 +295,25 @@
                 </LinearLayout>
             </HorizontalScrollView>
 
+            <TextView
+                android:id="@+id/popular_categories"
+                android:layout_marginTop="450dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Popular Categories"
+                app:layout_constraintEnd_toEndOf="@+id/horizontalcardview"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalcardview"
+                />
+
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/horizontalcardview"
+                android:layout_below="@+id/popular_categories"
                 android:rowCount="3"
                 android:columnCount="2"
                 android:layout_marginTop="15dp"
