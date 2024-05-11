@@ -61,13 +61,23 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
     }
 
 
-
+    // ------ My  Side  Bar --------
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_side_home -> openFragment(HomeFragment())
             R.id.nav_side_course -> openFragment(CourseFragment())
             R.id.nav_side_search -> openFragment(SearchFragment())
             R.id.nav_side_profile -> openFragment(ProfileFragment())
+            R.id.about_us -> {
+                val i = Intent(this,
+                    AboutUs::class.java)
+                startActivity(i)
+            }
+            R.id.privacy_policy -> {
+                val i = Intent(this,
+                    PrivacyPolicy::class.java)
+                startActivity(i)
+            }
             R.id.update_password -> {
                 val i = Intent(this,
                     CreateNewPassword::class.java)
