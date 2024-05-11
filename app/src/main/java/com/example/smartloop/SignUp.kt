@@ -19,7 +19,6 @@ class SignUp : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         auth = Firebase.auth
         binding.btnSignUp.setOnClickListener {
             val email = binding.etEmail.text.toString()
