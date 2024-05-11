@@ -1,6 +1,7 @@
 package com.example.smartloop
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -85,6 +86,12 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
                         Toast.makeText(this, "Account don't delete successfully", Toast.LENGTH_SHORT).show()
                     }
                 }
+            }
+            R.id.contact_us -> {
+                val number = "+923181646340"
+                val intent = Intent(Intent.ACTION_DIAL)
+                intent.setData(Uri.parse("tel:$number"))
+                startActivity(intent)
             }
             R.id.log_out ->  {
                 auth.signOut()
