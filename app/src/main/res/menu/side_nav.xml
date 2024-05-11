@@ -32,6 +32,11 @@
             android:title="Update Password"
             />
         <item
+            android:id="@+id/delete_account"
+            android:icon="@drawable/delete_account"
+            android:title="Delete Account"
+            />
+        <item
             android:id="@+id/log_out"
             android:icon="@drawable/logout"
             android:title="Log Out"

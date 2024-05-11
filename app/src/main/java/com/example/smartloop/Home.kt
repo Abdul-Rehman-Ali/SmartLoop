@@ -73,6 +73,19 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
                 startActivity(i)
                 finish()
             }
+            R.id.delete_account -> {
+                val user = auth.currentUser
+                user?.delete()?.addOnCompleteListener {
+                    if (it.isSuccessful){
+                        Toast.makeText(this, "Account delete successfully", Toast.LENGTH_SHORT).show()
+                        val i = Intent(this, LoginSignUp::class.java)
+                        startActivity(i)
+                        finish()
+                    } else {
+                        Toast.makeText(this, "Account don't delete successfully", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
             R.id.log_out ->  {
                 auth.signOut()
 
@@ -90,6 +103,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         return true
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)){
             binding.drawerLayout.closeDrawer(GravityCompat.START)
