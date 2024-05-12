@@ -41,6 +41,7 @@ android {
 
 dependencies {
 
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation ("com.airbnb.android:lottie:6.4.0")
     implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
     implementation(libs.androidx.core.ktx)
