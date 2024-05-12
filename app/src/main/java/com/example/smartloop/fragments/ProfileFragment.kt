@@ -6,9 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.smartloop.AboutUs
 import com.example.smartloop.CreateNewPassword
 import com.example.smartloop.Feedback
+import com.example.smartloop.LoginSignUp
 import com.example.smartloop.PrivacyPolicy
 import com.example.smartloop.databinding.FragmentProfileBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -52,6 +54,18 @@ class ProfileFragment : Fragment() {
         binding.feedbackLayout.setOnClickListener {
             val i = Intent(requireContext(), Feedback::class.java)
             requireContext().startActivity(i)
+        }
+
+
+        // logout
+        binding.logoutLayout.setOnClickListener {
+            auth.signOut()
+
+            val i = Intent(requireContext(), LoginSignUp::class.java)
+            requireContext().startActivity(i)
+
+            Toast.makeText(requireContext(), "Log Out Successfully",  Toast.LENGTH_SHORT).show()
+            requireActivity().finish()
         }
 
 
