@@ -334,11 +334,18 @@
 
         </RelativeLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/help_support_layout"
+            android:layout_marginTop="20dp"
+            android:background="@color/primary" />
+
         <RelativeLayout
             android:id="@+id/logout_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/feedback_layout"
+            android:layout_below="@id/help_support_layout"
             android:layout_marginTop="40dp"
             android:layout_marginStart="20dp"
             >
@@ -350,7 +357,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:src="@drawable/logout"
-                android:contentDescription="Help and Support" />
+                android:contentDescription="Logout" />
 
             <TextView
                 android:id="@+id/tv_logout"
