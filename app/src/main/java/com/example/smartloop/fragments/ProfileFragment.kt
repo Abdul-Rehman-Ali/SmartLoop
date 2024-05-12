@@ -83,10 +83,6 @@ class ProfileFragment : Fragment() {
             }
         }
 
-
-
-
-
     }
 
     override fun onDestroyView() {
