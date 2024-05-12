@@ -83,7 +83,6 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             R.id.update_password -> {
                 val i = Intent(this, CreateNewPassword::class.java)
                 startActivity(i)
-                finish()
             }
             // ---- Delete User ----
             R.id.delete_account -> {
