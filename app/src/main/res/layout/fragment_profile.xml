@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Cover Image -->
+        <!-- My Cover Image -->
         <ImageView
             android:id="@+id/profile_cover_image"
             android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             android:src="@drawable/homebanner"
             android:contentDescription="account" />
 
-        <!-- Profile Image -->
+        <!-- my Profile Image -->
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="120dp"
@@ -40,7 +40,7 @@
             android:textColor="@color/primary"
             android:textSize="24sp" />
 
-        <!-- Email -->
+
         <TextView
             android:id="@+id/profile_email"
             android:layout_width="wrap_content"
@@ -53,7 +53,6 @@
             android:textColor="@color/primary"
             android:textSize="16sp" />
 
-        <!-- Horizontal Line 1 -->
         <View
             android:id="@+id/horizontal_line1"
             android:layout_width="match_parent"
@@ -62,7 +61,6 @@
             android:layout_marginTop="20dp"
             android:background="@color/primary" />
 
-        <!-- Edit Profile -->
         <RelativeLayout
             android:id="@+id/profile_layout"
             android:layout_width="match_parent"
@@ -101,7 +99,6 @@
             android:layout_marginTop="20dp"
             android:background="@color/primary" />
 
-        <!-- Change Password -->
         <RelativeLayout
             android:id="@+id/change_password_layout"
             android:layout_width="match_parent"
@@ -141,7 +138,6 @@
             android:layout_marginTop="20dp"
             android:background="@color/primary" />
 
-        <!-- Delete User -->
         <RelativeLayout
             android:id="@+id/delete_user_layout"
             android:layout_width="match_parent"
@@ -181,7 +177,6 @@
             android:layout_marginTop="20dp"
             android:background="@color/primary" />
 
-        <!-- About Us -->
         <RelativeLayout
             android:id="@+id/about_us_layout"
             android:layout_width="match_parent"
@@ -221,7 +216,6 @@
             android:layout_marginTop="20dp"
             android:background="@color/primary" />
 
-        <!-- Privacy Policy -->
         <RelativeLayout
             android:id="@+id/privacy_policy_layout"
             android:layout_width="match_parent"
@@ -261,7 +255,6 @@
             android:layout_marginTop="20dp"
             android:background="@color/primary" />
 
-        <!-- Feedback -->
         <RelativeLayout
             android:id="@+id/feedback_layout"
             android:layout_width="match_parent"
@@ -301,7 +294,6 @@
             android:layout_marginTop="20dp"
             android:background="@color/primary" />
 
-        <!-- Help and Support -->
         <RelativeLayout
             android:id="@+id/help_support_layout"
             android:layout_width="match_parent"
