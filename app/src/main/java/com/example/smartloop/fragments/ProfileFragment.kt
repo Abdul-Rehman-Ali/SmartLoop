@@ -12,6 +12,7 @@ import com.example.smartloop.CreateNewPassword
 import com.example.smartloop.Feedback
 import com.example.smartloop.LoginSignUp
 import com.example.smartloop.PrivacyPolicy
+import com.example.smartloop.R
 import com.example.smartloop.databinding.FragmentProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -66,6 +67,13 @@ class ProfileFragment : Fragment() {
 
             Toast.makeText(requireContext(), "Log Out Successfully",  Toast.LENGTH_SHORT).show()
             requireActivity().finish()
+        }
+
+        // Help and support
+        binding.helpSupportLayout.setOnClickListener {
+            val fregmentTransection = activity?.supportFragmentManager?.beginTransaction()
+            fregmentTransection?.replace(R.id.fragment_container, SearchFragment())
+            fregmentTransection?.commit()
         }
 
         // delete account
