@@ -68,6 +68,21 @@ class ProfileFragment : Fragment() {
             requireActivity().finish()
         }
 
+        // delete account
+        binding.deleteUserLayout.setOnClickListener {
+            val user = auth.currentUser
+            user?.delete()?.addOnCompleteListener {
+                if (it.isSuccessful){
+                    Toast.makeText(requireContext(), "Account delete successfully", Toast.LENGTH_SHORT).show()
+                    val i = Intent(requireContext(), LoginSignUp::class.java)
+                    startActivity(i)
+                    requireActivity().finish()
+                } else {
+                    Toast.makeText(requireContext(), "Account don't delete successfully", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+
 
 
 
