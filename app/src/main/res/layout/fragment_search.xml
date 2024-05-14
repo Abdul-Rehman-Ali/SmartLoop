@@ -250,7 +250,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/phone_call "
+                            android:src="@drawable/phone_call"
                             android:padding="8dp"
                             android:layout_gravity="center_vertical"/>
 
