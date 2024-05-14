@@ -24,6 +24,8 @@ class SearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Phone Call
+
         binding.phoneCall1.setOnClickListener {
             val number = "+923181646340"
             val intent = Intent(Intent.ACTION_DIAL)
@@ -42,6 +44,30 @@ class SearchFragment : Fragment() {
             val number = "+923181646340"
             val intent = Intent(Intent.ACTION_DIAL)
             intent.setData(Uri.parse("tel:$number"))
+            startActivity(intent)
+        }
+
+
+
+        // Whatsapp Chat
+        binding.whatsapp1.setOnClickListener {
+            val number = "+923181646340"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse("https://api.whatsapp.com/send?phone=$number")
+            startActivity(intent)
+        }
+
+        binding.whatsapp2.setOnClickListener {
+            val number = "+923181646340"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse("https://api.whatsapp.com/send?phone=$number")
+            startActivity(intent)
+        }
+
+        binding.whatsapp3.setOnClickListener {
+            val number = "+923181646340"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse("https://api.whatsapp.com/send?phone=$number")
             startActivity(intent)
         }
 
