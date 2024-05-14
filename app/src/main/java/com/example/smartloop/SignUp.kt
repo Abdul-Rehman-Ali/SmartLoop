@@ -100,8 +100,8 @@ class SignUp : AppCompatActivity() {
         binding.etUsername.text.clear()
         binding.etEmail.text.clear()
         binding.etPhone.text.clear()
-        binding.etPassword.text.clear()
-        binding.etConfirmPassword.text.clear()
+        binding.etPassword.text?.clear()
+        binding.etConfirmPassword.text?.clear()
 
         // Clear any errors that might have been set
         binding.etUsername.error = null
