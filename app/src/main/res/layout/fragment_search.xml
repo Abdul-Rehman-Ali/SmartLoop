@@ -47,7 +47,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
                         app:cardCornerRadius="10dp"
-                        android:backgroundTint="#673AB7">
+                        android:backgroundTint="@color/primary">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -146,7 +146,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
                         app:cardCornerRadius="10dp"
-                        android:backgroundTint="#673AB7">
+                        android:backgroundTint="@color/primary">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -246,7 +246,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
                         app:cardCornerRadius="10dp"
-                        android:backgroundTint="#673AB7">
+                        android:backgroundTint="@color/primary">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
