@@ -24,18 +24,30 @@ class SignUp : AppCompatActivity() {
             val password = binding.etPassword.text.toString()
 
             if (checkAllField()) {
-                auth.createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(this) { task ->
-                        if (task.isSuccessful) {
+                if(binding.checkbox.isEnabled) {
+                    auth.createUserWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(this) { task ->
+                            if (task.isSuccessful) {
 
-                            Toast.makeText(this, "Successfully Account Created",
-                                Toast.LENGTH_SHORT).show()
-                            clearFields()
-                        } else {
-                            Toast.makeText(baseContext, "Authentication failed.",
-                                Toast.LENGTH_SHORT).show()
+                                Toast.makeText(
+                                    this, "Successfully Account Created",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                clearFields()
+                            } else {
+                                Toast.makeText(
+                                    baseContext, "Authentication failed.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
                         }
-                    }
+                }
+                else {
+                    Toast.makeText(
+                        this, "Accept privacy",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
             }
         }
     }
