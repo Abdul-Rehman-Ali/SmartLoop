@@ -4,12 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.smartloop.databinding.ActivityLoginBinding
-import com.example.smartloop.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -24,7 +20,6 @@ class Login : AppCompatActivity() {
         setContentView(binding.root)
 
         auth = Firebase.auth
-
         binding.forgetPassword.setOnClickListener {
             val i = Intent(this, ForgetPassword::class.java)
             startActivity(i)
@@ -36,28 +31,28 @@ class Login : AppCompatActivity() {
             val email = binding.etEmail.text.toString()
             val password = binding.etPassword.text.toString()
 
-            val i = Intent(this, Home::class.java)
+//            val i = Intent(this, Home::class.java)
+//            startActivity(i)
+//            finish()
+
+            if (checkAllField()) {
+                auth.signInWithEmailAndPassword(email,password).addOnCompleteListener {task ->
+                    if (task.isSuccessful) {
+
+                        Toast.makeText(this, "Successfully Sign In",
+                            Toast.LENGTH_SHORT).show()
+                        clearFields()
+
+                        val i = Intent(this, Home::class.java)
                         startActivity(i)
                         finish()
-
-//            if (checkAllField()) {
-//                auth.signInWithEmailAndPassword(email,password).addOnCompleteListener {task ->
-//                    if (task.isSuccessful) {
-//
-//                        Toast.makeText(this, "Successfully Sign In",
-//                            Toast.LENGTH_SHORT).show()
-//                        clearFields()
-//
-//                        val i = Intent(this, Home::class.java)
-//                        startActivity(i)
-//                        finish()
-//                    }
-//                    else {
-//                        Toast.makeText(baseContext, "Email or password wrong",
-//                            Toast.LENGTH_SHORT).show()
-//                    }
-//                }
-//            }
+                    }
+                    else {
+                        Toast.makeText(baseContext, "Email or password wrong",
+                            Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
 
         }
     }
@@ -97,5 +92,13 @@ class Login : AppCompatActivity() {
         binding.etPassword.error = null
     }
 
+//    @Deprecated("Deprecated in Java")
+//    override fun onBackPressed() {
+//
+//        finishAffinity()
+//        super.onBackPressed()
+//
+//
+//    }
 
 }

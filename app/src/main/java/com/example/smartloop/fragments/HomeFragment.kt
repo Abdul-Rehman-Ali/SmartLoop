@@ -9,8 +9,7 @@ import android.view.ViewGroup
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.smartloop.R
-import com.example.smartloop.WebDevelopment
-import com.example.smartloop.databinding.FragmentHomeBinding // Import the generated binding class
+import com.example.smartloop.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null // Declare binding variable
@@ -24,14 +23,14 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
 
-        binding.webDevelopment.setOnClickListener {
-            try {
-                val intent = Intent(requireActivity(), WebDevelopment::class.java)
-                startActivity(intent)
-            } catch (e: Exception) {
-                // Handle exception (e.g., log error, display a message)
-            }
-        }
+//        binding.webDevelopment.setOnClickListener {
+//            try {
+//                val intent = Intent(requireActivity(), WebDevelopment::class.java)
+//                startActivity(intent)
+//            } catch (e: Exception) {
+//                // Handle exception (e.g., log error, display a message)
+//            }
+//        }
 
     }
 
@@ -52,9 +51,9 @@ class HomeFragment : Fragment() {
 
 
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        // Nullify the binding reference to avoid memory leaks
-        _binding = null
-    }
+//    override fun onDestroyView() {
+//        super.onDestroyView()
+//        // Nullify the binding reference to avoid memory leaks
+//        _binding = null
+//    }
 }

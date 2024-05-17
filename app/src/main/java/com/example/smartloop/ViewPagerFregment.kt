@@ -12,7 +12,6 @@ import com.example.smartloop.screens.ThirdOnboardingFragment
 
 class ViewPagerFregment : Fragment() {
 
-
     private var _binding: FragmentViewPagerFregmentBinding? = null
     private val binding get() = _binding!!
 
