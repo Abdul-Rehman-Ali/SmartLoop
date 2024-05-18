@@ -23,8 +23,10 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/quiz_title_text"
                 tools:text="Android"
+                android:textColor="@color/primary"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

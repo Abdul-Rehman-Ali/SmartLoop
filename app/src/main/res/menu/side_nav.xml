@@ -14,7 +14,7 @@
         <item
             android:id="@+id/nav_side_course"
             android:icon="@drawable/courses"
-            android:title="Courses"
+            android:title="Quizes"
             />
         <item
             android:id="@+id/nav_side_search"
