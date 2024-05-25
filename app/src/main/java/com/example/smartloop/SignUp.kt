@@ -7,11 +7,14 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.smartloop.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
+import java.util.*
 
 class SignUp : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivitySignUpBinding
+    private lateinit var firestore: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +22,8 @@ class SignUp : AppCompatActivity() {
         setContentView(binding.root)
 
         auth = Firebase.auth
+        firestore = FirebaseFirestore.getInstance()
+
         binding.btnSignUp.setOnClickListener {
             val email = binding.etEmail.text.toString()
             val password = binding.etPassword.text.toString()
@@ -27,20 +32,43 @@ class SignUp : AppCompatActivity() {
                 auth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
-
-                            Toast.makeText(this, "Successfully Account Created",
-                                Toast.LENGTH_SHORT).show()
-                            clearFields()
+                            val user = auth.currentUser
+                            user?.let {
+                                // Save user data to Firestore
+                                val userData = hashMapOf(
+                                    "name" to binding.etUsername.text.toString(),
+                                    "email" to email,
+                                    "phone" to binding.etPhone.text.toString(),
+                                    "password" to password,
+                                    "user_id" to user.uid,
+                                    "date" to Calendar.getInstance().time.toString()
+                                )
+                                firestore.collection("users").document(user.uid)
+                                    .set(userData)
+                                    .addOnSuccessListener {
+                                        Toast.makeText(
+                                            this, "Successfully Account Created",
+                                            Toast.LENGTH_SHORT
+                                        ).show()
+                                        clearFields()
+                                    }
+                                    .addOnFailureListener { e ->
+                                        Toast.makeText(
+                                            this, "Error: $e", Toast.LENGTH_SHORT).show()
+                                    }
+                            }
                         } else {
-                            Toast.makeText(baseContext, "Authentication failed.",
-                                Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                baseContext, "Authentication failed: ${task.exception?.message}",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
                     }
             }
         }
     }
 
-    // This part of code is shown my  validation of sign up page
+    // This part of code is shown my validation of sign up page
     private fun checkAllField(): Boolean {
         val email = binding.etEmail.text.toString()
         if(binding.etUsername.text.toString() == ""){
@@ -97,8 +125,7 @@ class SignUp : AppCompatActivity() {
         return true
     }
 
-
-    // This os used  to clear all the data that uses entered in the input fileds
+    // This is used to clear all the data that users entered in the input fields
     private fun clearFields() {
         binding.etUsername.text.clear()
         binding.etEmail.text.clear()
@@ -113,5 +140,4 @@ class SignUp : AppCompatActivity() {
         binding.etPassword.error = null
         binding.etConfirmPassword.error = null
     }
-
 }
