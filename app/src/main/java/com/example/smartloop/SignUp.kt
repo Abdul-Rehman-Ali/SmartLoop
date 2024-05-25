@@ -40,6 +40,7 @@ class SignUp : AppCompatActivity() {
         }
     }
 
+    // This part of code is shown my  validation of sign up page
     private fun checkAllField(): Boolean {
         val email = binding.etEmail.text.toString()
         if(binding.etUsername.text.toString() == ""){
@@ -96,6 +97,8 @@ class SignUp : AppCompatActivity() {
         return true
     }
 
+
+    // This os used  to clear all the data that uses entered in the input fileds
     private fun clearFields() {
         binding.etUsername.text.clear()
         binding.etEmail.text.clear()
@@ -103,7 +106,7 @@ class SignUp : AppCompatActivity() {
         binding.etPassword.text?.clear()
         binding.etConfirmPassword.text?.clear()
 
-        // Clear any errors that might have been set
+        // Clear any errors that come in the fields
         binding.etUsername.error = null
         binding.etEmail.error = null
         binding.etPhone.error = null
