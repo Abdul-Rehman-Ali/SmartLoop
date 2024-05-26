@@ -58,7 +58,6 @@
         <activity
             android:name=".admin.CategoryAddActivity"
             android:exported="false"
-            android:theme="@style/Theme.NoToolbar"
             />
         <activity
             android:name=".MainActivity"
