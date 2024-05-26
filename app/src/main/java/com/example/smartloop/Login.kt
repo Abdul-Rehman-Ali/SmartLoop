@@ -31,25 +31,33 @@ class Login : AppCompatActivity() {
             val email = binding.etEmail.text.toString()
             val password = binding.etPassword.text.toString()
 
-//            val i = Intent(this, Home::class.java)
-//            startActivity(i)
-//            finish()
 
             if (checkAllField()) {
-                auth.signInWithEmailAndPassword(email,password).addOnCompleteListener {task ->
-                    if (task.isSuccessful) {
 
-                        Toast.makeText(this, "Successfully Sign In",
-                            Toast.LENGTH_SHORT).show()
-                        clearFields()
+                // For Admin Account
+                if (email == "admin@gmail.com" && password == "Csma1039"){
+                    val i = Intent(this, AboutUs::class.java)
+                    startActivity(i)
+                    finish()
+                }
+               else
+                {
+                    // for  user account
+                    auth.signInWithEmailAndPassword(email,password).addOnCompleteListener {task ->
+                        if (task.isSuccessful) {
 
-                        val i = Intent(this, Home::class.java)
-                        startActivity(i)
-                        finish()
-                    }
-                    else {
-                        Toast.makeText(baseContext, "Email or password wrong",
-                            Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, "Successfully Sign In",
+                                Toast.LENGTH_SHORT).show()
+                            clearFields()
+
+                            val i = Intent(this, Home::class.java)
+                            startActivity(i)
+                            finish()
+                        }
+                        else {
+                            Toast.makeText(baseContext, "Email or password wrong",
+                                Toast.LENGTH_SHORT).show()
+                        }
                     }
                 }
             }
