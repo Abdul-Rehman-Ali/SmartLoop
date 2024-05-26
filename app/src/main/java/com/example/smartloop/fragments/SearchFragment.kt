@@ -27,21 +27,21 @@ class SearchFragment : Fragment() {
         // Phone Call
 
         binding.phoneCall1.setOnClickListener {
-            val number = "+923181646340"
+            val number = "+923464298524"
             val intent = Intent(Intent.ACTION_DIAL)
             intent.setData(Uri.parse("tel:$number"))
             startActivity(intent)
         }
 
         binding.phoneCall2.setOnClickListener {
-            val number = "+923181646340"
+            val number = "+923464298524"
             val intent = Intent(Intent.ACTION_DIAL)
             intent.setData(Uri.parse("tel:$number"))
             startActivity(intent)
         }
 
         binding.phoneCall3.setOnClickListener {
-            val number = "+923181646340"
+            val number = "+923464298524"
             val intent = Intent(Intent.ACTION_DIAL)
             intent.setData(Uri.parse("tel:$number"))
             startActivity(intent)
@@ -51,21 +51,21 @@ class SearchFragment : Fragment() {
 
         // Whatsapp Chat
         binding.whatsapp1.setOnClickListener {
-            val number = "+923181646340"
+            val number = "+923464298524"
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse("https://api.whatsapp.com/send?phone=$number")
             startActivity(intent)
         }
 
         binding.whatsapp2.setOnClickListener {
-            val number = "+923181646340"
+            val number = "+923464298524"
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse("https://api.whatsapp.com/send?phone=$number")
             startActivity(intent)
         }
 
         binding.whatsapp3.setOnClickListener {
-            val number = "+923181646340"
+            val number = "+923464298524"
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse("https://api.whatsapp.com/send?phone=$number")
             startActivity(intent)

@@ -100,7 +100,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             }
             // Contact Us
             R.id.contact_us -> {
-                val number = "+923181646340"
+                val number = "+923464298524"
                 val intent = Intent(Intent.ACTION_DIAL)
                 intent.setData(Uri.parse("tel:$number"))
                 startActivity(intent)
