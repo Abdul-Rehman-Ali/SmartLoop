@@ -19,9 +19,6 @@
             android:name=".admin.DashboardAdmin"
             android:exported="false" />
         <activity
-            android:name=".admin.CategoryAddActivity"
-            android:exported="false" />
-        <activity
             android:name=".Feedback"
             android:exported="false" />
         <activity
@@ -58,6 +55,11 @@
         <activity
             android:name=".LoginSignUp"
             android:exported="false" />
+        <activity
+            android:name=".admin.CategoryAddActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoToolbar"
+            />
         <activity
             android:name=".MainActivity"
             android:exported="true"
