@@ -1,5 +1,6 @@
 package com.example.smartloop
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
@@ -51,6 +52,9 @@ class SignUp : AppCompatActivity() {
                                             Toast.LENGTH_SHORT
                                         ).show()
                                         clearFields()
+                                        val i = Intent(this, Login::class.java)
+                                        startActivity(i)
+                                        finish()
                                     }
                                     .addOnFailureListener { e ->
                                         Toast.makeText(
