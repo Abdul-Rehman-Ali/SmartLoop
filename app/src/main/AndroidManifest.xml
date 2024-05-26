@@ -16,6 +16,12 @@
             android:name=".QuizActivity"
             android:exported="false" />
         <activity
+            android:name=".admin.DashboardAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".admin.CategoryAddActivity"
+            android:exported="false" />
+        <activity
             android:name=".Feedback"
             android:exported="false" />
         <activity

@@ -17,9 +17,10 @@ class DashboardAdmin : AppCompatActivity() {
         binding = ActivityDashboardAdminBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Ensure the button ID matches the one in your XML layout file
         binding.btnAddCategory.setOnClickListener {
-            val i = Intent(this, CategoryAddActivity::class.java)
-            startActivity(i)
+            val intent = Intent(this, CategoryAddActivity::class.java)
+            startActivity(intent)
         }
     }
 }
