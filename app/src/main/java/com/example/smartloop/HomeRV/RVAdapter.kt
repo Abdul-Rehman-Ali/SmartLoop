@@ -26,12 +26,9 @@ class RVAdapter(val list: ArrayList<RVModel>, val images: Context) : Adapter<Our
         holder.img.setImageResource(list.get(position).image)
         holder.tv.text = list.get(position).tv
     }
-
-
 }
 
 class OurVH(view: View) : RecyclerView.ViewHolder(view) {
-
     val img = view.findViewById<ImageView>(R.id.img)
     val tv = view.findViewById<TextView>(R.id.tv_course)
 

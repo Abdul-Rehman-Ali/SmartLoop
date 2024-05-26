@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.smartloop.databinding.FragmentViewPagerFregmentBinding
-import com.example.smartloop.screens.FirstOnboardingScreen
-import com.example.smartloop.screens.SecondOnboardingFragment
-import com.example.smartloop.screens.ThirdOnboardingFragment
+import com.example.smartloop.onboarding_screens.FirstOnboardingScreen
+import com.example.smartloop.onboarding_screens.SecondOnboardingFragment
+import com.example.smartloop.onboarding_screens.ThirdOnboardingFragment
 
 class ViewPagerFregment : Fragment() {
 

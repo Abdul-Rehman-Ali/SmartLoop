@@ -1,4 +1,4 @@
-package com.example.smartloop.screens
+package com.example.smartloop.onboarding_screens
 
 import android.content.Context
 import android.os.Bundle

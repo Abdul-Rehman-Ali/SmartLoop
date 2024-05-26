@@ -1,4 +1,4 @@
-package com.example.smartloop.screens
+package com.example.smartloop.onboarding_screens
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,28 +7,27 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import com.example.smartloop.R
-import com.example.smartloop.databinding.FragmentSecondOnboardingBinding
+import com.example.smartloop.databinding.FragmentFirstOnboardingScreenBinding
 
-class SecondOnboardingFragment : Fragment() {
+class FirstOnboardingScreen : Fragment() {
 
-
-    private var _binding: FragmentSecondOnboardingBinding? = null
+    private var _binding: FragmentFirstOnboardingScreenBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentSecondOnboardingBinding.inflate(inflater, container, false)
+        _binding = FragmentFirstOnboardingScreenBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.next2.setOnClickListener {
+        binding.next1.setOnClickListener {
             val viewPager = requireActivity().findViewById<ViewPager2>(R.id.viewPager)
-            viewPager.currentItem = 2
+            viewPager.currentItem = 1
         }
     }
 
@@ -36,5 +35,6 @@ class SecondOnboardingFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 
 }
