@@ -1,26 +1,17 @@
 package com.example.smartloop.admin
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.smartloop.databinding.ActivityDashboardAdminBinding
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.example.smartloop.R
 
 class DashboardAdmin : AppCompatActivity() {
-
-    private lateinit var binding: ActivityDashboardAdminBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
-        binding = ActivityDashboardAdminBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        binding.btnAddCategory.setOnClickListener {
-            val i = Intent(this, CategoryAddActivity::class.java)
-            startActivity(i)
-        }
+        setContentView(R.layout.activity_dashboard_admin)
 
     }
 }
