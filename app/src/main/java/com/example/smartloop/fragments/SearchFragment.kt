@@ -75,6 +75,6 @@ class SearchFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null // Clean up reference to binding to avoid memory leaks
+        _binding = null
     }
 }
