@@ -1,13 +1,15 @@
 package com.example.smartloop.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
+import com.example.smartloop.HomeRV.Constant
+import com.example.smartloop.HomeRV.RVAdapter
 import com.example.smartloop.R
 import com.example.smartloop.databinding.FragmentHomeBinding
 
@@ -47,6 +49,12 @@ class HomeFragment : Fragment() {
         imgList.add(SlideModel((R.drawable.seoslider), "SEO"))
 
         binding.imageSlider.setImageList(imgList, ScaleTypes.FIT)
+
+
+
+        // Recycler View
+        binding.rv.adapter = RVAdapter(Constant.getData(), requireContext())
+        binding.rv.layoutManager = GridLayoutManager(requireContext(), 2)
     }
 
 
