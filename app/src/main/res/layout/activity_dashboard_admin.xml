@@ -7,9 +7,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back01"
+    android:layout_marginTop="50dp"
     tools:context=".admin.DashboardAdmin">
 
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/search"
+        android:hint="Search"
+        android:padding="15dp"
+        android:drawablePadding="10dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_categorey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_search"
+        android:layout_above="@+id/bottomLL"
+        android:layout_margin="5dp"
+        tools:listitem="@layout/row_categorey"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
     <LinearLayout
+        android:id="@+id/bottomLL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
