@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.smartloop.admin.DashboardAdmin
 import com.example.smartloop.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -36,7 +37,7 @@ class Login : AppCompatActivity() {
 
                 // For Admin Account
                 if (email == "admin@gmail.com" && password == "Csma1039"){
-                    val i = Intent(this, AboutUs::class.java)
+                    val i = Intent(this, DashboardAdmin::class.java)
                     startActivity(i)
                     finish()
                 }
