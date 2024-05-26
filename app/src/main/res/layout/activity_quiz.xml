@@ -141,9 +141,6 @@
                 android:paddingHorizontal="40dp"
                 android:id="@+id/next_btn" />
 
-
-
-
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
