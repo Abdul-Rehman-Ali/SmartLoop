@@ -21,7 +21,6 @@ class CategoryAddActivity : AppCompatActivity() {
 
         binding = ActivityCategoryAddBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         auth = FirebaseAuth.getInstance()
 
         // Initialize the progress dialog
@@ -29,11 +28,9 @@ class CategoryAddActivity : AppCompatActivity() {
             setTitle("Please Wait")
             setCanceledOnTouchOutside(false)
         }
-
         binding.btnBack.setOnClickListener {
             onBackPressed()
         }
-
         binding.btnSubmit.setOnClickListener {
             validateData()
         }
@@ -45,7 +42,6 @@ class CategoryAddActivity : AppCompatActivity() {
         if (category.isBlank()){
             Toast.makeText(this,"Please enter category...", Toast.LENGTH_SHORT).show()
         } else {
-
             addCategoryFirebase()
         }
     }
