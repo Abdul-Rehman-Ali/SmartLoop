@@ -58,9 +58,13 @@ class CourseFragment : Fragment() {
             .addOnSuccessListener { dataSnapshot ->
                 if (dataSnapshot.exists()) {
                     for (snapshot in dataSnapshot.children) {
-                        val quizModel = snapshot.getValue(QuizModel::class.java)
-                        if (quizModel != null) {
-                            quizModelList.add(quizModel)
+                        // Check if the key is in the range of 0 to 4
+                        val key = snapshot.key?.toIntOrNull()
+                        if (key != null && key in 0..4) {
+                            val quizModel = snapshot.getValue(QuizModel::class.java)
+                            if (quizModel != null) {
+                                quizModelList.add(quizModel)
+                            }
                         }
                     }
                 }
@@ -71,4 +75,5 @@ class CourseFragment : Fragment() {
                 // Handle the error appropriately
             }
     }
+
 }

@@ -11,7 +11,7 @@ class ModelCategorey {
 
     constructor()
 
-    constructor(id:String, category: String, timestamp: Long, uInt: String){
+    constructor(id:String, category: String, timestamp: Long, uid: String){
         this.id = id
         this.category = category
         this.timestamp = timestamp

@@ -43,15 +43,17 @@ class DashboardAdmin : AppCompatActivity() {
                 }
             }
             override fun afterTextChanged(s: Editable?) {
-
             }
-
         })
-
 
         // Ensure the button ID matches the one in your XML layout file
         binding.btnAddCategory.setOnClickListener {
             val intent = Intent(this, CategoryAddActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.addPdfFile.setOnClickListener {
+            val intent = Intent(this, PdfAddActivity::class.java)
             startActivity(intent)
         }
     }
@@ -68,9 +70,7 @@ class DashboardAdmin : AppCompatActivity() {
                 adapterCategory = AdapterCategory(this@DashboardAdmin, categoreyArrayList)
                 binding.rvCategorey.adapter = adapterCategory
             }
-
             override fun onCancelled(error: DatabaseError) {
-
             }
         })
 
