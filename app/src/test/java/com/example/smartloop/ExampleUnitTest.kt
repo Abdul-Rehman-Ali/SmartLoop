@@ -1,6 +1,6 @@
 package com.example.smartloop
 
-import org.junit.Test
+import org.junit.jupiter.api.Test
 
 import org.junit.Assert.*
 

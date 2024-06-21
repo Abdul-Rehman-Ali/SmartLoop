@@ -1,6 +1,7 @@
 package com.example.smartloop.admin
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,7 +33,10 @@ class AdapterCategory(private val context: Context, var categoryArrayList: Array
     override fun onBindViewHolder(holder: HolderCategory, position: Int) {
         // get data
         val model = categoryArrayList[position]
+        val id = model.id
         val category = model.category
+        val uid = model.uid
+        val timestamp = model.timestamp
 
         // set data
         holder.categoryTv.text = category
@@ -49,6 +53,12 @@ class AdapterCategory(private val context: Context, var categoryArrayList: Array
                     dialog.dismiss()
                 }
                 .show()
+        }
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, PdfListAdminActivity::class.java )
+            intent.putExtra("categoryId" , id)
+            intent.putExtra("category" , category)
+            context.startActivity(intent)
         }
     }
 

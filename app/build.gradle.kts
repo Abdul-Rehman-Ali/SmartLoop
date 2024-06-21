@@ -37,10 +37,17 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    packagingOptions {
+        exclude("META-INF/LICENSE.md")
+    }
 }
 
 dependencies {
 
+
+//    implementation ("com.github.barteksc:android-pdf-viewer:2.8.2")
+    implementation ("com.github.barteksc:AndroidPdfViewerV1:1.6.0")
+//    implementation("io.github.afreakyelf:Pdf-Viewer:2.1.1")
     implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation ("com.airbnb.android:lottie:6.4.0")
     implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
@@ -59,4 +66,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
 }

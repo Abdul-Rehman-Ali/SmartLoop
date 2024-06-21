@@ -112,11 +112,12 @@ class PdfAddActivity : AppCompatActivity() {
         val uid = firebaseAuth.uid
         val hashMap: HashMap<String, Any> = HashMap()
         hashMap["uid"] = "$uid"
+        hashMap["id"] = "$timestamp"
         hashMap["title"] = "$title"
         hashMap["description"] = "$description"
         hashMap["categoryId"] = "$selectedCategoryId"
         hashMap["url"] = "$uploadPdfUrl"
-        hashMap["timestamp"] = "$timestamp"
+        hashMap["timestamp"] = timestamp
         hashMap["viewCount"] = 0
         hashMap["downloadCount"] = 0
 
