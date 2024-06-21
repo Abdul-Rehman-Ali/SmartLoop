@@ -40,7 +40,7 @@ class AdapterPdfAdmin:RecyclerView.Adapter<AdapterPdfAdmin.HolderPdfAdmin>, Filt
         val pdfUrl = model.url
         val timestamp = model.timestamp
 
-        val formattedDate = MyApplication.formatTimeStamp(timestamp)
+        val formattedDate = MyApplication.formatTimeStamp(timestamp.toLong())
         holder.tvtitle.text = title
         holder.tvdescription.text = description
         holder.tvdate.text = formattedDate

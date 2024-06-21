@@ -7,7 +7,7 @@ class ModelPdf {
     var description:String = ""
     var categoryId:String = ""
     var url:String = ""
-    var timestamp: Long = 0
+    var timestamp: String = ""
     var viewsCount:Long = 0
     var downloadsCount:Long = 0
 
@@ -30,7 +30,7 @@ class ModelPdf {
         this.description = description
         this.categoryId = categoryId
         this.url = url
-        this.timestamp = timestamp
+        this.timestamp = timestamp.toString()
         this.viewsCount = viewsCount
         this.downloadsCount = downloadsCount
     }
