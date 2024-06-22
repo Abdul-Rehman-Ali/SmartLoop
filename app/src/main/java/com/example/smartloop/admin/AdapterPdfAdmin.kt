@@ -10,6 +10,7 @@ import android.widget.Filter
 import android.widget.Filterable
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.smartloop.PdfDetailActivity
 import com.example.smartloop.PdfEditActivity
 import com.example.smartloop.databinding.RowPdfAdminBinding
 
@@ -54,9 +55,14 @@ class AdapterPdfAdmin:RecyclerView.Adapter<AdapterPdfAdmin.HolderPdfAdmin>, Filt
         MyApplication.loadPdfFromUrlSinglePage(pdfUrl, title, holder.pdfviewer, holder.progressBar, null)
         MyApplication.loadPdfSize(pdfUrl,title,holder.tvsize)
 
-
         holder.btnmore.setOnClickListener {
             moreOptionDialog(model, holder.tvcategory)
+        }
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, PdfDetailActivity::class.java)
+            intent.putExtra("bookId", pdfId)
+            context.startActivity(intent)
         }
     }
 
