@@ -266,6 +266,20 @@
             android:textColor="@color/white"
             />
 
+        <Button
+            android:id="@+id/btn_download_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Download"
+            android:layout_marginBottom="50dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_download_white"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/white"
+            />
+
+
+
     </LinearLayout>
 
 </RelativeLayout>

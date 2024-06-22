@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".admin.MyApplication"
@@ -16,6 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartLoop"
         tools:targetApi="31">
+        <activity
+            android:name=".admin.DashboardUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardUserActivity"
+            android:exported="false" />
         <activity
             android:name=".PdfViewActivity"
             android:exported="false" />
