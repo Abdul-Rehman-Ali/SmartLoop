@@ -22,7 +22,7 @@
             android:layout_margin="10dp"
             android:background="@android:color/transparent"
             android:paddingLeft="5dp"
-            android:src="@drawable/ic_back_white"
+
             />
 
         <ImageView

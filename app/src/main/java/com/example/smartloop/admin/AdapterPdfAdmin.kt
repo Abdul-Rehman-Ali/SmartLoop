@@ -1,12 +1,16 @@
 package com.example.smartloop.admin
 
+import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Filter
 import android.widget.Filterable
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.smartloop.PdfEditActivity
 import com.example.smartloop.databinding.RowPdfAdminBinding
 
 class AdapterPdfAdmin:RecyclerView.Adapter<AdapterPdfAdmin.HolderPdfAdmin>, Filterable{
@@ -18,7 +22,7 @@ class AdapterPdfAdmin:RecyclerView.Adapter<AdapterPdfAdmin.HolderPdfAdmin>, Filt
     private lateinit var binding: RowPdfAdminBinding
 
 
-    var filter : FilterPdfAdmin? = null
+    private var filter : FilterPdfAdmin? = null
     constructor(context: Context, pdfArrayList: ArrayList<ModelPdf>) : super() {
         this.context = context
         this.pdfArrayList = pdfArrayList
@@ -49,6 +53,32 @@ class AdapterPdfAdmin:RecyclerView.Adapter<AdapterPdfAdmin.HolderPdfAdmin>, Filt
         MyApplication.loadCategory(categoryId, holder.tvcategory)
         MyApplication.loadPdfFromUrlSinglePage(pdfUrl, title, holder.pdfviewer, holder.progressBar, null)
         MyApplication.loadPdfSize(pdfUrl,title,holder.tvsize)
+
+
+        holder.btnmore.setOnClickListener {
+            moreOptionDialog(model, holder.tvcategory)
+        }
+    }
+
+    private fun moreOptionDialog(model: ModelPdf, tvcategory: TextView) {
+        val bookId = model.id
+        val bookUrl = model.url
+        val bookTitle = model.title
+
+        val options = arrayOf("Edit", "Delete")
+        val builder = AlertDialog.Builder(context)
+        builder.setTitle("Choose Option")
+            .setItems(options){ dialog, position ->
+                    if (position == 0){
+                        val intent = Intent(context, PdfEditActivity::class.java)
+                        intent.putExtra("bookId", bookId)
+                        context.startActivity(intent)
+                    } else if (position == 1){
+                        MyApplication.deleteBook(context, bookId, bookUrl, bookTitle)
+
+                    }
+            }
+            .show()
     }
 
     override fun getItemCount(): Int {

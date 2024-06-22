@@ -10,22 +10,22 @@
     tools:context=".admin.PdfListAdminActivity">
 
     <RelativeLayout
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="30dp"
         android:id="@+id/toolbarRL"
         android:background="@drawable/shape_toolbar02"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize">
 
-        <ImageView
-            android:id="@+id/btn_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_back_white"
-            android:background="@android:color/transparent"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
-            android:padding="5dp"
-            />
+<!--        <ImageView-->
+<!--            android:id="@+id/btn_back"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_back_white"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:padding="5dp"-->
+<!--            />-->
 
         <TextView
             android:id="@+id/tv_title"
