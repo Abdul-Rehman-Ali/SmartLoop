@@ -5,15 +5,15 @@ plugins {
 }
 
 android {
-    namespace = "com.example.smartloop"
+    namespace = "com.smartloop.learning"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.smartloop"
+        applicationId = "com.smartloop.learning"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 3
+        versionName = "3.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -38,18 +38,26 @@ android {
         viewBinding = true
     }
     packagingOptions {
-        exclude("META-INF/LICENSE.md")
+        resources {
+            excludes += setOf(
+                "META-INF/LICENSE.md",
+                "META-INF/LICENSE-notice.md",
+                "META-INF/DEPENDENCIES",
+                "META-INF/NOTICE",
+                "META-INF/NOTICE.txt",
+                "META-INF/LICENSE",
+                "META-INF/LICENSE.txt",
+                "META-INF/DEPENDENCIES.txt"
+            )
+        }
     }
 }
 
 dependencies {
-
-
-
-    implementation ("com.github.barteksc:AndroidPdfViewerV1:1.6.0")
-    implementation ("de.hdodenhof:circleimageview:3.1.0")
-    implementation ("com.airbnb.android:lottie:6.4.0")
-    implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
+    implementation("com.github.barteksc:AndroidPdfViewerV1:1.6.0")
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation("com.airbnb.android:lottie:6.4.0")
+    implementation("com.github.denzcoskun:ImageSlideshow:0.1.2")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -66,4 +74,13 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency {
+        if (requested.group == "org.junit.jupiter") {
+            // Add an exclusion for the specific license file causing the conflict
+            exclude(module = "META-INF/LICENSE.md")
+        }
+    }
 }

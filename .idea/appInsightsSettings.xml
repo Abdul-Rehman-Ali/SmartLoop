@@ -27,7 +27,7 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.example.smartloop" />
+                  <option name="appId" value="com.smartloop.learning" />
                   <option name="mobileSdkAppId" value="1:451275327064:android:36188ad97a2cd6f7406c2d" />
                   <option name="projectId" value="smartloop-b5fe3" />
                   <option name="projectNumber" value="451275327064" />

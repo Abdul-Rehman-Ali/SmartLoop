@@ -38,7 +38,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome to Smartloop! We value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and share information about you when you use our platform." />
+            android:text="Welcome to Smartloop! We value your privacy and are committed to protecting it. This Privacy Policy explains that we do not collect, use, or share any personal information about you when you use our platform." />
 
         <TextView
             android:layout_width="wrap_content"
@@ -53,38 +53,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textColor="@color/primary"
-            android:text="Personal Information" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" - We collect information that you provide to us directly, such as when you create an account, enroll in a course, or communicate with us. This information may include your name, email address, payment information, and any other details you choose to provide." />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textColor="@color/primary"
-            android:text="Usage Information" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" - We collect information about your interactions with our platform, including the courses you access, the time spent on our site, and other usage details. This helps us improve our services and provide a better experience for our users." />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textColor="@color/primary"
-            android:text="Device Information" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" - We collect information about the device you use to access our platform, including the hardware model, operating system, and unique device identifiers. This information helps us ensure that our platform is compatible with various devices and improve our services." />
+            android:text="We do not collect any personal information from our users. Our app is designed to function without the need to collect, use, or share any personal data." />
 
         <TextView
             android:layout_width="wrap_content"
@@ -99,32 +68,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="We use the information we collect to:" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" - Provide, maintain, and improve our services" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" - Process transactions and send related information" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" - Communicate with you, including sending updates and promotional materials" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" - Monitor and analyze usage and trends to improve your experience" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" - Personalize and improve our services, including providing recommendations" />
+            android:text="Since we do not collect any personal information, we do not use any information for any purpose. Our app does not track, store, or analyze user data." />
 
         <TextView
             android:layout_width="wrap_content"
@@ -139,43 +83,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="We may share information about you as follows:" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textColor="@color/primary"
-            android:text="With Service Providers" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" - We may share your information with third-party vendors, consultants, and other service providers who need access to such information to carry out work on our behalf." />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textColor="@color/primary"
-            android:text="For Legal Reasons" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" - We may share your information in response to a request for information if we believe disclosure is in accordance with any applicable law, regulation, or legal process." />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textColor="@color/primary"
-            android:text="With Your Consent" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" - We may share your information with your consent or at your direction." />
+            android:text="We do not share any information about our users, as we do not collect any personal information to share." />
 
         <TextView
             android:layout_width="wrap_content"
@@ -190,32 +98,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="We take the security of your information seriously and use reasonable measures to protect it. However, please be aware that no security measures are perfect or impenetrable." />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your Choices"
-            android:textStyle="bold"
-            android:textColor="@color/primary"
-            android:textSize="20sp"
-            android:paddingTop="16dp"
-            android:paddingBottom="4dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="You have choices regarding the information we collect and how it is used:" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" - You can update or delete your account information at any time through your account settings." />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" - You can opt-out of receiving promotional communications from us by following the instructions in those communications." />
+            android:text="We are committed to ensuring the security of our app. Since no personal information is collected, there is no risk of unauthorized access to personal data." />
 
         <TextView
             android:layout_width="wrap_content"
@@ -230,7 +113,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="We may update this Privacy Policy from time to time. If we make significant changes, we will notify you through our platform or by other means, so you can review the changes before continuing to use our services." />
+            android:text="We may update this Privacy Policy from time to time. Any changes will be posted on this page. However, our commitment to not collecting or sharing any personal information will remain unchanged." />
 
         <TextView
             android:layout_width="wrap_content"

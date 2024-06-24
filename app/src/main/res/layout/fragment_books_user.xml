@@ -8,17 +8,20 @@
     android:orientation="vertical"
     tools:context=".admin.BooksUserFragment">
 
-    <EditText
-        android:id="@+id/et_search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@color/white"
-        android:drawableStart="@drawable/ic_search_gray"
-        android:hint="Search"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        />
+<!--    <EditText-->
+<!--        android:id="@+id/et_search"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        android:background="@color/white"-->
+<!--        android:drawableStart="@drawable/ic_search_gray"-->
+<!--        android:hint="Search"-->
+<!--        android:padding="10dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_books"
@@ -26,6 +29,7 @@
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/row_pdf_user"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
         />
 

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.smartloop.SplashFragment"
+        android:name="com.smartloop.learning.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewPagerFregment"
-        android:name="com.example.smartloop.ViewPagerFregment"
+        android:name="com.smartloop.learning.ViewPagerFregment"
         android:label="fragment_view_pager_fregment"
         tools:layout="@layout/fragment_view_pager_fregment" >
         <action
@@ -32,7 +32,7 @@
     </fragment>
     <activity
         android:id="@+id/loginSignUp"
-        android:name="com.example.smartloop.LoginSignUp"
+        android:name="com.smartloop.learning.LoginSignUp"
         android:label="activity_login_sign_up"
         tools:layout="@layout/activity_login_sign_up" />
 </navigation>
