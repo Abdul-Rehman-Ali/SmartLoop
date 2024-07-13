@@ -5,15 +5,15 @@ plugins {
 }
 
 android {
-    namespace = "com.smartloop.learning"
+    namespace = "com.smartloopLearn.learning"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.smartloop.learning"
+        applicationId = "com.smartloopLearn.learning"
         minSdk = 24
         targetSdk = 34
-        versionCode = 3
-        versionName = "3.0"
+        versionCode = 4
+        versionName = "4.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -56,7 +56,7 @@ android {
 dependencies {
     implementation("com.github.barteksc:AndroidPdfViewerV1:1.6.0")
     implementation("de.hdodenhof:circleimageview:3.1.0")
-    implementation("com.airbnb.android:lottie:6.4.0")
+    implementation("com.airbnb.android:lottie:6.4.1")
     implementation("com.github.denzcoskun:ImageSlideshow:0.1.2")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -73,7 +73,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
+    androidTestImplementation("org.junit.jupiter:junit-jupiter:5.10.3")
 }
 
 configurations.all {
